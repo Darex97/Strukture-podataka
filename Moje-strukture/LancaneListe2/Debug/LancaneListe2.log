@@ -1,0 +1,3 @@
+﻿  Lancana.cpp
+C:\Users\user\source\repos\LancaneListe2\Lancana.cpp(144,7): warning C4101: 'pomN': unreferenced local variable
+  LancaneListe2.vcxproj -> C:\Users\user\source\repos\LancaneListe2\Debug\LancaneListe2.exe

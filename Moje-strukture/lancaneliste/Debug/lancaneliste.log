@@ -1,0 +1,6 @@
+﻿Debug\Lancana.obj : warning LNK4042: object specified more than once; extras ignored
+Source.obj : error LNK2019: unresolved external symbol "public: __thiscall Lancana::~Lancana(void)" (??1Lancana@@QAE@XZ) referenced in function _main
+Source.obj : error LNK2019: unresolved external symbol "public: void __thiscall Lancana::dodajnaglavu(int)" (?dodajnaglavu@Lancana@@QAEXH@Z) referenced in function _main
+Source.obj : error LNK2019: unresolved external symbol "public: void __thiscall Lancana::deleteel(int)" (?deleteel@Lancana@@QAEXH@Z) referenced in function _main
+Source.obj : error LNK2019: unresolved external symbol "public: void __thiscall Lancana::print(void)" (?print@Lancana@@QAEXXZ) referenced in function _main
+C:\Users\user\source\repos\lancaneliste\Debug\lancaneliste.exe : fatal error LNK1120: 4 unresolved externals

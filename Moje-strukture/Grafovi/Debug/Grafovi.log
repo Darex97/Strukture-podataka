@@ -1,0 +1,6 @@
+﻿  GraphAsLists.cpp
+  Source.cpp
+C:\Users\user\source\repos\Grafovi\Source.cpp(7,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Generating Code...
+C:\Users\user\source\repos\Grafovi\GraphAsLists.cpp(256): warning C4715: 'GraphAsLists::Putavionom': not all control paths return a value
+  Grafovi.vcxproj -> C:\Users\user\source\repos\Grafovi\Debug\Grafovi.exe
