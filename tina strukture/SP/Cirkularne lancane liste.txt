@@ -1,0 +1,105 @@
+// Umetanje čvora pre zadatog čvora cirkularne lančane liste.
+insertBeforeLoc(START, LOC, E)
+   novi <- getnode()
+   info(novi) <- E
+   if (START = NULL) then // Lista je prazna.
+      link(novi) <- novi
+      START <- novi
+   else if (LOC = START OR LOC = NULL) then // Umetanje pre prvog čvora.
+      POK <- START
+      while (link(POK) != START)
+         POK <- link(POK)
+      endwhile
+      link(novi) <- START
+      link(POK) <- novi
+      START <- novi
+   else
+      POK <- START
+      while (link(POK) != LOC)
+         POK <- link(POK)
+      endwhile
+      link(novi) <- link(POK)
+      link(POK) <- novi
+   exit
+
+// Umetanje čvora posle zadatog čvora cirkularne lančane liste.
+insertAfterLoc(START, LOC, E)
+   novi <- getnode()
+   info(novi) <- E
+   if (START = NULL) then // Lista je prazna.
+      link(novi) <- novi
+      START <- novi
+   else if (LOC = NULL) then // Umetanje pre prvog čvora.
+      POK <- START
+      while (link(POK) != START)
+         POK <- link(POK)
+      endwhile
+      link(novi) <- START
+      link(POK) <- novi
+      START <- novi
+   else if (link(LOC) = START) then // Umetanje posle poslednjeg čvora.
+      link(novi) <- START
+      link(LOC) <- novi
+   else
+      link(novi) <- link(LOC)
+      link(LOC) <- novi
+   exit
+
+// Brisanje čvora pre zadatog čvora cirkularne lančane liste.
+deleteBeforeLoc(START, LOC, E)
+   POK <- START
+   if (POK != NULL AND LOC != NULL) then
+      if (POK = LOC) then // Brisanje poslednjeg čvora.
+         if (link(POK) = START) then
+            E <- info(POK)
+            freenode(POK)
+            START <- NULL
+         else
+            while (link(link(POK)) != START)
+               POK <- link(POK)
+            endwhile
+            E <- info(link(POK))
+            freenode(link(POK))
+            link(POK) <- LOC
+      else if (link(POK) = LOC) then // Brisanje prvog čvora.
+         E <- info(POK)
+         while (link(POK) != START)
+            POK <- link(POK)
+         endwhile
+         link(POK) <- LOC
+         freenode(START)
+         START <- LOC
+      else
+         while (link(link(POK)) != LOC)
+            POK <- link(POK)
+         endwhile
+         E <- info(link(POK))
+         freenode(link(POK))
+         link(POK) <- LOC
+   exit
+
+// Brisanje čvora posle zadatog čvora cirkularne lančane liste.
+deleteAfterLoc(START, LOC, E)
+   POK <- START
+   if (POK != NULL AND LOC != NULL) then
+      if (link(LOC) = START) then // Brisanje prvog čvora.
+         if (link(POK) = START) then
+            E <- info(POK)
+            freenode(POK)
+            START <- NULL
+         else
+            E <- info(POK)
+            START <- link(POK)
+            freenode(link(LOC))
+            link(LOC) <- START
+      else if (link(link(LOC)) = START) then // Brisanje poslednjeg čvora.
+         POK <- link(LOC)
+         E <- info(POK)
+         freenode(POK)
+         link(LOC) <- START
+      else
+         POK <- link(LOC)
+         E <- info(POK)
+         link(LOC) <- link(POK)
+         freenode(POK)
+   exit

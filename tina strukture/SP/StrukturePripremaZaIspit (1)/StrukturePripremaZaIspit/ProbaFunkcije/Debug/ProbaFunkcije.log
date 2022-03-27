@@ -1,0 +1,4 @@
+﻿  Source.cpp
+C:\Users\KORISNIK\source\repos\StrukturePripremaZaIspit\ProbaFunkcije\Source.cpp(49,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\KORISNIK\source\repos\StrukturePripremaZaIspit\ProbaFunkcije\Source.cpp(56,20): warning C4018: '<': signed/unsigned mismatch
+  ProbaFunkcije.vcxproj -> C:\Users\KORISNIK\source\repos\StrukturePripremaZaIspit\Debug\ProbaFunkcije.exe

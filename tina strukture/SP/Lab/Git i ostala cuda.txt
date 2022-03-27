@@ -1,0 +1,54 @@
+Git - distribuirani VCS (Version Control System), koristi se za razne vrste projekata.
+      Detektuje apsolutno svaku promenu nad postojećim fajlom, kao i kreiranje novog/brisanje postojećeg fajla.
+      Kad se push-uje promena na repository, šalje samo fajlove koji su promenjeni.
+      Repository može da bude lokalno na računaru, a može i na nekom serveru (npr. GitHub, Amazon, Microsoft Azure DevOps ili nekom našem).
+
+Commit - "šalje" sve promene (na jednom ili više fajlova) na lokalnom nivou Git repository-ja.
+         Uglavnom ide zajedno sa tzv. "Commit Message", gde se kratko opiše šta je promenjeno/dodato/obrisano.
+         Što se Commit Message-a tiče, interno u okviru tima, mogu da se dogovore neke notacije (npr. [Create], [Update], [Remove], ...).
+
+Push - šalje sve commit-ovane promene na server, odnosno repository.
+       Moguće je odmah uraditi Commit & Push, bez posebnog commit-a i push-a, ali se ne preporučuje.
+       
+       NOTE: Kada se uradi push, promene su trajne!!! Ako je reč samo o commit-u, onda je taj commit moguće obrisati.
+             U tom slučaju, promene kao da nije ni bilo (moguće je obrisati i sa lokalnog nivoa, na nivou fajlova).
+
+Pull - preuzimaju se sve tuđe push-ovane promene sa servera na lokalu.
+       
+       NOTE: Postoji mogućnost konflikta, ukoliko je nekoliko osoba menjalo isti fajl.
+             Ako sam Git ne uspe da razreši konflikte, moraju ručno da se razrešavaju. (Postoje programi za to, neće da vam treba za lab.)
+
+Pull Request - uglavnom se koristi kad neko hoće da proveri vaš push, pre nego što bude postavljen na server i dostupan ostalima.
+               Taj neko, recimo Project Manager, može da odbije pull request, napiše komentare, ako nešto treba da se ispravi.
+               (Verovatno ni to neće da vam treba za lab.)
+
+Branch - tzv. "master" branch uvek postoji, na njemu na kraju idu sve promene. Moguće je dodavati više branch-ova.
+         Neka praksa je, da svako ima neki svoj branch na kome radi, pa nakon toga se radi tzv. "Merge" gde se više branch-a spajaju.
+         Nazivi isto zavise od internog dogovora tima, kao i od toga šta je sve potrebno (npr. "Features", "Bugs", "Design", ...).
+
+NOTE: Git možete da instalirate, ako već nemate preko njihovog sajta (https://git-scm.com/) ili preko Visual Studio-a.
+      Ne znam da li po default-u VS instalira Git, mada, može i preko VS Installer-a da se doda.
+
+NOTE: Sve ove "operacije" mogu da se odrade preko nekog razvojnog okruženja (npr. SourceTree, Git Extensions, GitKraken, ...),
+      odnosno kucanjem u Command Line-u (čini mi se da ih ima sve komande u onom čudu što je Nikola poslao).
+      Takođe, postoji mogućnost i preko Visual Studio-a u par klika.
+
+NOTE: Ako vam bude trebala pomoć oko instaliranja Git-a (ima milion opcija), možete da mi se obratite putem Viber-a, Slack-a, itd. :)
+
+			BONUS CHAPTER
+
+Bitbucket - podržava celu priču oko Git-a, služi za "skladištenje" tih repository-ja.
+            Možete da eksperimentišete sa nekim test repository-jem, samo nemojte da dirate ono što je Nikola napravio već xD.
+            Ako se odlučite za eksperimente, možete da vidite i ostala čuda, Pull Request, Branching, itd.
+
+Clockify - Time Tracking System, ima dobru integraciju sa Trello-m (koliko sam videla), samo je potrebno da se instalira Browser Extension.
+           UpWork npr. koristi nešto na tu foru, samo njihovo, zbog onih "Hourly Paid Jobs".
+           Kad se instalira Browser Extension, može preko njega da se pokrene i zaustavi vreme, a može i preko Trello kartice.
+
+Slack - pored svih onih čuda koje ima i Skype, ima dodatno mogućnost integracije sa drugim servisima.
+        Recimo, ako se napravi integracija sa Trello-m, svaka promena koja se tamo desi, može preko Chat Bot-a da stigne kao poruka.
+
+Trello - uglavnom se koristi za organizaciju određenih task-ova po karticama.
+         Stvarno dobra stvar, jer ne moraš da misliš šta si uradio, a šta ne.
+         Pored onih postojećih "To Do", "In Progress", "Done" ili kako god da se zovu, možete da dodajete i svoje neke.
+         Kartice takođe, imaju milion stvari koje mogu da se dodaju (npr. Due Date, ChechBox, itd).
