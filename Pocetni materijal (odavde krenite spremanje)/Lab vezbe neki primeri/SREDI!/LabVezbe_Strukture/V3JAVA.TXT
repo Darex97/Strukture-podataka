@@ -1,0 +1,172 @@
+class Element
+{
+	Element prethodni;
+	Element sledeci;
+	int info;
+};
+
+
+
+public class Class1
+{
+	protected	Element LeviKraj;
+	protected	Element DesniKraj;
+	protected Element LRMP;
+	
+	public void Postavi(int n)
+		{
+		Element tekuci,prethodni;
+		tekuci=new Element();
+			tekuci.prethodni=null;
+			tekuci.sledeci=null;
+			LeviKraj=null;
+			DesniKraj=null;
+			LRMP=tekuci;
+			prethodni=tekuci;
+			for(int i=1;i<n-1;i++)
+			{
+				tekuci=new Element();
+				tekuci.prethodni=prethodni;
+				tekuci.sledeci=null;
+				prethodni.sledeci=tekuci;
+				prethodni=tekuci;
+			}
+	}
+	
+	public void DodajLevo(int podatak)
+	{
+		Element novi;
+		if(LRMP==null)
+			System.out.println("Ne mozete dodati novi element posto je dek vec pun");
+		else
+		{
+			novi=LRMP;
+			LRMP=LRMP.sledeci;
+			LRMP.prethodni=null;
+			novi.sledeci=LeviKraj;
+			novi.info=podatak;
+			if(LeviKraj==null)
+				DesniKraj=novi;
+			else
+				LeviKraj.prethodni=novi;
+			LeviKraj=novi;
+		}
+	}
+	
+	public void DodajDesno(int podatak)
+	{
+		Element novi;
+		if(LRMP==null)
+			System.out.println("Ne mozete dodati novi element posto je dek vec pun");
+		else
+		{
+			novi=LRMP;
+			LRMP=LRMP.sledeci;
+			LRMP.prethodni=null;
+			novi.sledeci=null;
+			novi.prethodni=DesniKraj;
+			novi.info=podatak;
+			if(DesniKraj==null)
+				LeviKraj=novi;
+			else
+				DesniKraj.sledeci=novi;
+			DesniKraj=novi;
+		}
+	}
+		
+	public void ObrisiLevo()
+	{
+		Element stari;
+		if(LeviKraj==null)
+			System.out.println("Ne mozete obrisati element zato sto je dek prazan");
+		else
+		{
+			stari=LeviKraj;
+			if(LeviKraj==DesniKraj)
+				DesniKraj=null;
+			LeviKraj=LeviKraj.sledeci;
+			LeviKraj.prethodni=null;
+			LRMP.prethodni=stari;
+			stari.sledeci=LRMP;
+			LRMP=stari;
+		}
+	}
+		
+	public void ObrisiDesno()
+	{
+		Element stari;
+		if(DesniKraj==null)
+			System.out.println("Ne mozete obrisati element zato sto je dek prazan");
+		else
+		{
+			stari=DesniKraj;
+			if(LeviKraj==DesniKraj)
+				LeviKraj=null;
+			DesniKraj=DesniKraj.prethodni;
+			DesniKraj.sledeci=null;
+			LRMP.prethodni=stari;
+			stari.sledeci=LRMP;
+			stari.prethodni=null;
+			LRMP=stari;
+		}
+	}
+		
+	public void Stampaj(int n)
+	{
+		Element tekuci;
+		if(LeviKraj==null)
+		{
+			System.out.println("Dek je prazan");
+		}
+		else
+		{
+			switch(n)
+			{
+			case 1:
+				{
+					tekuci=LeviKraj;
+					while(tekuci!=null)
+					{
+						System.out.println(tekuci.info);
+						tekuci=tekuci.sledeci;
+					}
+					break;
+				}
+			case 2:
+				{
+					tekuci=DesniKraj;
+					while(tekuci!=null)
+					{
+						System.out.println(tekuci.info);
+						tekuci=tekuci.prethodni;
+					}
+					break;
+				}
+			}
+		}
+	}
+		
+	
+	public static void main (String[] args)
+	{
+		int n;
+		Class1 Dek;
+		Dek=new Class1();
+		System.out.println("Ovo je prezentacija rada sa dekom");
+		Dek.Postavi(10);
+		Dek.Stampaj(1);
+		System.out.println("Unecemo u dek elemente 2 i 1 sa leve strane, i 3 i 4 sa desne strane. Sada je sadrzaj naseg deka, odstampan sa leve strane sledeci:");
+		Dek.DodajLevo(2);
+		Dek.DodajLevo(1);
+		Dek.DodajDesno(3);
+		Dek.DodajDesno(4);
+		Dek.Stampaj(1);
+		System.out.println("Sada cemo iz deka izbaciti prvi element sa leve i prvi element sa desne strane i odstampati dek sa desne strane");
+		Dek.ObrisiLevo();
+		Dek.ObrisiDesno();
+		Dek.Stampaj(2);
+	}
+	
+}
+
+

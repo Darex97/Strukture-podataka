@@ -1,0 +1,34 @@
+﻿Build started 3/27/2013 12:16:02 AM.
+     1>Project "D:\Elfak\IV Semestar\Strukture Podataka\Programi vezbanje\Lab2\Bart\SparceMatrix\SparceMatrix\SparceMatrix\SparceMatrix.vcxproj" on node 2 (build target(s)).
+     1>PrepareForBuild:
+         Creating directory "D:\Elfak\IV Semestar\Strukture Podataka\Programi vezbanje\Lab2\Bart\SparceMatrix\SparceMatrix\Debug\".
+       InitializeBuildStatus:
+         Creating "Debug\SparceMatrix.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp SparseMatrix.cpp
+         SparseMatrix.cpp
+         main.cpp
+         Generating Code...
+     1>d:\elfak\iv semestar\strukture podataka\programi vezbanje\lab2\bart\sparcematrix\sparcematrix\sparcematrix\sparsematrix.cpp(90): warning C4715: 'SparseMatrix::getElement' : not all control paths return a value
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\SparceMatrix.exe.embed.manifest.res" Debug\SparceMatrix_manifest.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Elfak\IV Semestar\Strukture Podataka\Programi vezbanje\Lab2\Bart\SparceMatrix\SparceMatrix\Debug\SparceMatrix.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\SparceMatrix.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Elfak\IV Semestar\Strukture Podataka\Programi vezbanje\Lab2\Bart\SparceMatrix\SparceMatrix\Debug\SparceMatrix.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Elfak\IV Semestar\Strukture Podataka\Programi vezbanje\Lab2\Bart\SparceMatrix\SparceMatrix\Debug\SparceMatrix.lib" /MACHINE:X86 Debug\SparceMatrix.exe.embed.manifest.res
+         Debug\main.obj
+         Debug\SparseMatrix.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\SparceMatrix.exe.embed.manifest" /manifest Debug\SparceMatrix.exe.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\SparceMatrix.exe.embed.manifest.res" Debug\SparceMatrix_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Elfak\IV Semestar\Strukture Podataka\Programi vezbanje\Lab2\Bart\SparceMatrix\SparceMatrix\Debug\SparceMatrix.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\SparceMatrix.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Elfak\IV Semestar\Strukture Podataka\Programi vezbanje\Lab2\Bart\SparceMatrix\SparceMatrix\Debug\SparceMatrix.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Elfak\IV Semestar\Strukture Podataka\Programi vezbanje\Lab2\Bart\SparceMatrix\SparceMatrix\Debug\SparceMatrix.lib" /MACHINE:X86 Debug\SparceMatrix.exe.embed.manifest.res
+         Debug\main.obj
+         Debug\SparseMatrix.obj
+         SparceMatrix.vcxproj -> D:\Elfak\IV Semestar\Strukture Podataka\Programi vezbanje\Lab2\Bart\SparceMatrix\SparceMatrix\Debug\SparceMatrix.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\SparceMatrix.unsuccessfulbuild".
+         Touching "Debug\SparceMatrix.lastbuildstate".
+     1>Done Building Project "D:\Elfak\IV Semestar\Strukture Podataka\Programi vezbanje\Lab2\Bart\SparceMatrix\SparceMatrix\SparceMatrix\SparceMatrix.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.52

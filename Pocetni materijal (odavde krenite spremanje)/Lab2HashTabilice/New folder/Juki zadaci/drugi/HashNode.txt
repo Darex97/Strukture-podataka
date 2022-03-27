@@ -1,0 +1,58 @@
+#pragma once
+#include<iostream>
+using namespace std;
+
+class HashNode
+{
+public:
+	int key;
+	char* ime;
+	char* prezime;
+	HashNode* next;
+public:
+	HashNode()
+	{
+		key = 0;
+		next = NULL;
+		ime = prezime = NULL;
+	}
+	HashNode(int k, char* i, char* p)
+	{
+		key = k;
+		ime = new char[strlen(i) + 1];
+		strcpy(ime, i);
+		prezime = new char[strlen(p) + 1];
+		strcpy(prezime, p);
+		next = NULL;
+	}
+	HashNode(int k, char* i, char* p, HashNode* n)
+	{
+		key = k;
+		ime = new char[strlen(i) + 1];
+		strcpy(ime, i);
+		prezime = new char[strlen(p) + 1];
+		strcpy(prezime, p);
+		next = n;
+	}
+	~HashNode()
+	{
+		if (ime)
+			delete ime;
+		if (prezime)
+			delete prezime;
+	}
+	bool isEqualK(int k)
+	{
+		return key == k;
+	}
+	bool isEqualAll(int k, char* i, char* p)
+	{
+		if (key == k && strcmp(ime, i) == 0 && strcmp(prezime, p) == 0)
+			return 1;
+		return 0;
+	}
+	void printNode()
+	{
+		cout << "Telefon:" << key << "| Ime:" << ime << "| Prezime:" << prezime << "; ";
+	}
+};

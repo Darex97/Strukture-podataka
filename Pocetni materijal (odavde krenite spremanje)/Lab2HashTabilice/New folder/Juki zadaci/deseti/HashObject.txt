@@ -1,0 +1,51 @@
+#pragma once
+#include<iostream>
+using namespace std;
+
+class HashObject
+{
+public:
+	int key;
+	bool status;//0-slobodan,1-zauzet
+	char* ime;
+	char* prezime;
+public:
+	HashObject()
+	{
+		key = 0;
+		status = 0;
+		ime = prezime = NULL;
+	}
+	~HashObject()
+	{
+		if (ime)
+			delete ime;
+		if (prezime)
+			delete prezime;
+	}
+	bool isEqualKey(int k)
+	{
+		return key == k;
+	}
+	bool isEqualAll(int k, char* i, char *p)
+	{
+		if (k == k && strcmp(ime, i) == 0 && strcmp(prezime, p) == 0)
+			return 1;
+		return 0;
+	}
+	bool isEmpty()
+	{
+		return status == 0;
+	}
+	void printObject()
+	{
+		cout << "Br. tel:" << key << "| Ime:" << ime << "| Prezime:" << prezime << endl;
+	}
+	void set(int k, char* i, char* p, int s)
+	{
+		key = k;
+		ime = i;
+		prezime = p;
+		status = s;
+	}
+};

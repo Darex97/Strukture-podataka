@@ -1,0 +1,113 @@
+#pragma once
+#include"HashObject.h"
+
+class HashTable
+{
+private:
+	int length;
+	int counter;
+	HashObject* arr;
+public:
+	HashTable(int l)
+	{
+		length = l;
+		counter = 0;
+		arr = new HashObject[length];
+	}
+	~HashTable()
+	{
+		if (arr)
+			delete[] arr;
+	}
+	void insert(char* k)
+	{
+		unsigned int hash = h(f(k));
+		if (!arr[hash].isEmpty())
+		{
+			int i = 1;
+			int prev = hash;
+			while (!arr[g(hash, i)].isEmpty() && i < length)
+			{
+				if (arr[prev].next != -1)
+					prev = arr[prev].next;
+				i++;
+			}
+			if (i == length)
+				throw "Full!";
+			arr[prev].next = g(hash,i);
+			if(arr[g(hash,i)].status == 0)
+				arr[g(hash, i)].next = -1;
+			arr[g(hash, i)].key = k;
+			arr[g(hash, i)].status = 2;
+		}
+		else
+		{
+			if (arr[hash].status == 0)
+				arr[hash].next = -1;
+			arr[hash].key = k;
+			arr[hash].status = 2;
+		}
+	}
+	void print()
+	{
+		for(int i=0;i<length;i++)
+			if (!arr[i].noEl())
+			{
+				cout << i << ":";
+				arr[i].printObj();
+			}
+	}
+	int find(char* k)
+	{
+		unsigned int hash = h(f(k));
+		if (!arr[hash].noEl() && !arr[hash].isEqual(k))
+		{
+			int i = 1;
+			while (!arr[g(hash, i)].isEqual(k) && i < length)
+				i++;
+			if (i == length)
+				return -1;
+			else
+				return g(hash, i);
+		}
+		else
+		{
+			if (arr[hash].noEl())
+				return -1;
+			return hash;
+		}
+	}
+
+private:
+	unsigned int h(unsigned int i)
+	{
+		return i%length;
+	}
+	unsigned int g(unsigned int i, unsigned int j)
+	{
+		return (i + j) % length;
+	}
+	unsigned int f(int i)
+	{
+		return abs(i);
+	}
+	unsigned int f(double d)
+	{
+		if (d == 0)
+			return 0;
+		else
+		{
+			int exponent;
+			double mantissa = frexp(d, &exponent);
+			return (unsigned int)(2 * fabs(mantissa) - 1)*~0U;
+		}
+	}
+	unsigned int f(char *s)
+	{
+		unsigned int res = 0;
+		unsigned int a = 7;
+		for (int i = 0; s[i] != '\0'; i++)
+			res = res << a^s[i];
+		return res;
+	}
+};

@@ -1,0 +1,72 @@
+#pragma once
+#include<iostream>
+using namespace std;
+
+class HashObject
+{
+public:
+	char* key;
+	int status; //0-slobodan, 1-obrisan, 2-zauzet
+	int next;
+
+public:
+	HashObject()
+	{
+		key = NULL;
+		status = 0;
+		next = -1;
+	}
+	HashObject(char* obj)
+	{
+		key = new char[strlen(obj) + 1];
+		strcpy(key, obj);
+		status = 2;
+		next = -1;
+	}
+	~HashObject()
+	{
+		if (key)
+			delete key;
+	}
+	bool isEqual(char* p)
+	{
+		if (strcmp(key, p) == 0)
+			return 1;
+		return 0;
+	}
+	void set(char* p,int n)
+	{
+		if (key)
+			delete key;
+		key = new char[strlen(p) + 1];
+		strcpy(key, p);
+		status = 2;
+		next = n;
+	}
+	void set(char* p)
+	{
+		if (key)
+			delete key;
+		key = new char[strlen(p) + 1];
+		strcpy(key, p);
+		status = 2;
+	}
+	void print()
+	{
+		if (key)
+			cout << key << "|Status:" << status << "|Next:" << next;
+	}
+	void free()
+	{
+		if (key)
+			delete key;
+		key = new char[1];
+		key = "\0";
+		status = 1;
+	}
+	bool isUsed()
+	{
+		return status == 2;
+	}
+
+};

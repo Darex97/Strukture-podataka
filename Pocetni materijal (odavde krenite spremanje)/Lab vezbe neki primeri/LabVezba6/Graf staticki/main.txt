@@ -1,0 +1,14 @@
+#include<iostream.h>
+#include "graf.h"
+void main()
+{
+	graf a(3);
+	a.insert(2,1);
+	a.print();
+	a.insert(76,0);
+	a.print();
+	int *s=a.nadji();
+	int b ;
+	cin >> b;
+}
+	

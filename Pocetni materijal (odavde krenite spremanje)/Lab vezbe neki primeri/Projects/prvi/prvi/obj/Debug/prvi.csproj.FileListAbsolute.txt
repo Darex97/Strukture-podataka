@@ -1,0 +1,7 @@
+c:\users\nikolic\documents\visual studio 2013\Projects\prvi\prvi\bin\Debug\prvi.exe.config
+c:\users\nikolic\documents\visual studio 2013\Projects\prvi\prvi\bin\Debug\prvi.exe
+c:\users\nikolic\documents\visual studio 2013\Projects\prvi\prvi\bin\Debug\prvi.pdb
+c:\users\nikolic\documents\visual studio 2013\Projects\prvi\prvi\bin\Debug\Oracle.DataAccess.dll
+c:\users\nikolic\documents\visual studio 2013\Projects\prvi\prvi\obj\Debug\prvi.csprojResolveAssemblyReference.cache
+c:\users\nikolic\documents\visual studio 2013\Projects\prvi\prvi\obj\Debug\prvi.exe
+c:\users\nikolic\documents\visual studio 2013\Projects\prvi\prvi\obj\Debug\prvi.pdb

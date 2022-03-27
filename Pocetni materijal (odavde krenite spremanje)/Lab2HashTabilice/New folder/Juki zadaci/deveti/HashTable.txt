@@ -1,0 +1,89 @@
+#pragma once
+#include"HashObject.h"
+
+class HashTable
+{
+private:
+	int length;
+	int counter;
+	HashObject* arr;
+public:
+	HashTable(int l)
+	{
+		counter = 0;
+		length = l;
+		arr = new HashObject[length];
+	}
+	~HashTable()
+	{
+		if (arr)
+			delete[] arr;
+	}
+	void insert(char* k)
+	{
+		unsigned int hash = h(f(k));
+		if (!arr[hash].isEmpty())
+		{
+			int i = 1;
+			while (!arr[g(f(k), i)].isEmpty() && i < length)
+				i++;
+			if (i == length)
+				throw "Bad transform!";
+			arr[g(f(k), i)].key = k;
+			arr[g(f(k), i)].status = 2;
+			counter++;
+		}
+		else
+		{
+			arr[hash].key = k;
+			arr[hash].status = 2;
+			counter++;
+		}
+	}
+	void print()
+	{
+		for(int i=0;i<length;i++)
+			if (!arr[i].noEl())
+			{
+				cout << i << ":";
+				arr[i].printObj();
+			}
+	}
+private:
+	unsigned int h(unsigned int i)
+	{
+		return i%length;
+	}
+	unsigned int c(unsigned int i)
+	{
+		return (i * i) % length;
+	}
+	unsigned int g(unsigned int i, unsigned int j)
+	{
+		return (h(i) + c(j)) % length;
+	}
+	unsigned int f(int i)
+	{
+		return abs(i);
+	}
+	unsigned int f(double d)
+	{
+		if (d == 0)
+			return 0;
+		else
+		{
+			int exponent;
+			double mantissa = frexp(d, &exponent);
+			return (unsigned int)(2 * fabs(mantissa) - 1)*~0U;
+		}
+	}
+	unsigned int f(char* s)
+	{
+		unsigned int res = 0;
+		unsigned int a = 7;
+		for (int i = 0; s[i] != '\0'; i++)
+			res = res << a^s[i];
+		return res;
+	}
+
+};

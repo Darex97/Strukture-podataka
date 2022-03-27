@@ -1,0 +1,14 @@
+*labLancanePolinom - radio Zimmer, savrsen, pogledaj ga, objasnjen je, prva dva zadatka za prvi lab.
+
+*StruktureListe - prekucan i delimicno obradjen kod za Liste, imas sve s tim sto mislim da SkipListe nisam nesto posebno obradjivao
+
+*StruktureStackQueueDequeue - Samo prekucan kod, nista posebno. Dek sam preskocio.
+
+*StruktureSelectionSort - imas sliku pogledaj nacrtano je.
+
+*StruktureSelectionSortLab1Zad4 - tu imas i Selection i Bubble sort uradjen, nacrtaj ako ti je tesko da razumes
+
+*StruktureStatickeSLLZad6 - Ja sam pokusao na dosta nacina ovaj bubble sort da uradim menjajuci i info i next delove,
+ medjutim, kad se ispomesaju next delovi nastane opsti haos, pogledaj sliku koju sam ti stavio pod imenom StaticBubble i videces i sam ponovo.
+
+*SparseMatrixV- radio Veljko Stamenkovic, lepo je uradjeno, samo nema Get() funckiju.

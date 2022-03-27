@@ -1,0 +1,42 @@
+#pragma once
+#include<iostream>
+using namespace std;
+
+class HashObject
+{
+public:
+	int status;
+	int next;
+	char* key;
+
+public:
+	HashObject()
+	{
+		status = 0;
+		next = -1;
+		key = NULL;
+	}
+	~HashObject()
+	{
+		if (key)
+			delete key;
+	}
+	bool isEqual(char* s)
+	{
+		if (strcmp(key, s) == 0)
+			return 1;
+		return 0;
+	}
+	bool isEmpty()
+	{
+		return (status == 0 || status == 1);
+	}
+	bool noEl()
+	{
+		return status == 0;
+	}
+	void printObj()
+	{
+		cout << key << "| Status:" << status << "| Next:" << next << endl;
+	}
+};

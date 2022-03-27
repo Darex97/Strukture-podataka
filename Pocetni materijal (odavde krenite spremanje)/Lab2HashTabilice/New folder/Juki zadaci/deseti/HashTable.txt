@@ -1,0 +1,105 @@
+#pragma once
+#include"HashObject.h"
+
+class HashTable
+{
+private:
+	int length;
+	int counter;
+	HashObject* arr;
+public:
+	HashTable()
+	{
+		length = counter = 0;
+		arr = NULL;
+	}
+	HashTable(int l)
+	{
+		length = l;
+		counter = 0;
+		arr = new HashObject[length];
+	}
+	~HashTable()
+	{
+		if (arr)
+			delete[] arr;
+	}
+	void insert(int ke, char* im, char* pr)
+	{
+		unsigned int fja = f(ke);
+		unsigned int hash = h(fja);
+		if (!arr[hash].isEmpty())
+		{
+			int i = 1;
+			while (!arr[g(fja, i)].isEmpty() && i < length)
+				i++;
+			if (i == length)
+				throw "Bad transform!";
+			arr[g(fja, i)].set(ke, im, pr, 1);
+		}
+		else
+			arr[hash].set(ke, im, pr, 2);
+	}
+	void print()
+	{
+		for(int i=0;i<length;i++)
+			if (!arr[i].isEmpty())
+			{
+				cout << i << ":";
+				arr[i].printObject();
+			}
+	}
+	int find(int ke, char* im, char* pr)
+	{
+		unsigned int fja = f(ke);
+		unsigned int hash = h(fja);
+		if (!arr[hash].isEqualAll(ke, im, pr))
+		{
+			int i = 1;
+			while (!arr[g(fja, i)].isEqualAll(ke, im, pr) && i < length)
+				i++;
+			if (i == length)
+				return -1;
+			return g(fja, i);
+		}
+		else
+			return hash;
+	}
+
+private:
+	unsigned int h(unsigned int i)
+	{
+		return i%length;
+	}
+	unsigned int g(unsigned int i, unsigned int j)
+	{
+		return (h(i) + c(j)) % length;
+	}
+	unsigned int c(unsigned int i)
+	{
+		return (i*i);
+	}
+	unsigned int f(int i)
+	{
+		return abs(i);
+	}
+	unsigned int f(double d)
+	{
+		if (d == 0)
+			return 0;
+		else
+		{
+			int exponent;
+			double mantissa = frexp(d, &exponent);
+			return (unsigned int)(2 * fabs(d) - 1)*~0U;
+		}
+	}
+	unsigned int f(char *s)
+	{
+		unsigned int res = 0;
+		unsigned int a = 7;
+		for (int i = 0; s[i] != '\0'; i++)
+			res = res << a^s[i];
+		return res;
+	}
+};

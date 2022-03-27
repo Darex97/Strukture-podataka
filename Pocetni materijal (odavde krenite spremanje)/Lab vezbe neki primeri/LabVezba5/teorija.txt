@@ -1,0 +1,44 @@
+Stablo (engl. tree) je konacan neprazan skup 
+cvorova za koga važi:
+1. Postoji jedan specijalan cvor koji se naziva 
+koren (engl. root) stabla.
+2. Ostali cvorovi mogu se podeliti u m disjunktnih 
+podskupova ( m > 0 ) , od kojih svaki prestavlja 
+stablo.
+
+- stepen cvora - broj podstabala svakog cvora
+- eksterni cvor, terminalni cvor ili list - cvor nultog
+stepena
+- neterminalni cvor - cvor stepena >= 1 
+- nivo ili dubina – nivo u odnosu na koren stabla
+- visina stabla – max. nivo + 1
+- moment stabla - broj cvorova u stablu,
+- težina stabla - broj listova
+- uredeno stablo – stablo kod koga je bitna relativna
+uredenost podstabala u svakom cvoru
+
+- binarno stablo -stablo kod koga svaki cvor ima 0, 1 ili 2 direktna
+sledbenika
+- prošireno ili striktno binarno stablo - binarno stablo koje ima u 
+svakom cvoru 0 ili 2 sledbenika
+- potpuno binarno stablo - svi nivoi maksimalno popunjeni
+- gotovo potpuno - binarno stablo kod koga su svi nivoi, osim
+poslednjeg, potpuno popunjeni, dok je poslednji nivo delimicno
+popunjen sleva udesno
+- uredeno binarno stablo - binarno stablo kod koga svaki cvor ima
+svojstvo da je njegova vrednost veca od svih vrednosti u cvorovima
+levog podstabla, a manja (ili jednaka) od svih vrednosti u cvorovima
+desnog podstabla
+- uravnoteženo ili balansirano binarno stablo - binarno stablo kod
+koga se visina levog i desnog podstabla bilo kog cvora razlikuje
+najviše za jedan
+- perfektno uravnoteženo stablo - uravnoteženo binarno stablo kod
+koga su svi listovi na jednom ili dva nivoa.
+
+Gotovo potpuno stablo ciji svaki cvor sadrži kljuc sa vrednošcu
+vecom/manjom ili jednakom kljucu njegovog roditelja, naziva
+se gomila (engl. heap). Ukoliko je vrednost roditeljskog kljuca
+veca (ili jednaka) od vrednosti kljuceva cvorova njegove dece, 
+radi se o max gomili(engl. maxheap), a ako je manja ili
+jednaka, o min gomili(engl. minheap). Pod pojmom gomila
+najcešce se podrazumeva binarna gomila. 

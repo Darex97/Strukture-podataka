@@ -1,0 +1,19 @@
+delete nizKoef;	//Ovo je niz koeficijenata klase CPolynom
+		dim = poly1.dim + poly2.dim - 1; //dim je dimenzija tog niza
+		nizKoef = new double [dim];
+
+		for (unsigned int i = 0; i < dim; i++)
+			nizKoef [i] = 0;				//Inicijalizujem sve elemente na nula
+											//da bi se moglo dodavati odgovarajuci
+											//proizvoidi
+
+		for (unsigned int i = 0; i < poly1.dim; i++){
+
+			unsigned int l = i;				//Indeks niza koj sluzi za upis rezultata
+
+			for (unsigned int j = 0; j < poly1.dim; i++){
+
+				nizKoef [l] += poly1.nizKoef [i] * poly2.nizKoef [j];
+				l++;
+			}
+		}

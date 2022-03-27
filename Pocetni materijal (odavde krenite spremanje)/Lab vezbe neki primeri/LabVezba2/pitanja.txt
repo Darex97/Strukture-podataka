@@ -1,0 +1,41 @@
+1. Koja ja prednost dvostruko ulancanih lista u odnosu na jednostruko ulancanih?
+
+Prednost je ta da postoji mogucnost da se krecemo sa bilo kog cvora i ka pocetku i ka
+kraju.
+
+2. Funkcija dodaj (node* p, node* n) koja dodaje cvor na koga ukazuje p posle cvora
+na koga ukazuje n (dvostruko ulancana lista):
+
+void dodaj (node* p, node* n) {
+	
+	p->dLinker = n->dLinker;
+	p->lLinker = n;
+	n->dLinker->lLinker = p;
+	n->dLinker = p;
+}
+
+
+3. Funkcija addToHead (node* n) koja dodaje cvor na koga ukazuje n na pocetku
+jednostruko ulancane liste:
+
+void addToHead (node* n) {
+
+	n->lLinker = NULL;
+	n->dLinker = head;
+	head = n;
+}
+
+
+4. Zasto se pored pokazivac na pocetku LL koristi i pokazivac na kraju liste?
+Da bi npr kod dvostruko ulancanih listi mogli bi da zapocnemo obilazak i sa kraja LL
+
+5. Funkcija delete (node* n) koja brise cvor na koga ukazuje pokazivac n u 
+dvostrukoj ulancanoj listi:
+
+void delete (node* n) {
+
+	node* p = n;
+	p->lLinker->dLinker = p->dLinker;
+	p->dLinker->lLinker = p->lLinker;
+	delete p;
+}

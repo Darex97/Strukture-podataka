@@ -1,0 +1,16 @@
+﻿Build started 5/8/2011 4:17:01 PM.
+     1>Project "c:\Users\JolexTek\documents\visual studio 2010\Projects\Hash Tablice\Hash Tablice\Hash Tablice.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\Hash Tablice.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt HashTable.cpp
+         HashTable.cpp
+     1>c:\users\jolextek\documents\visual studio 2010\projects\hash tablice\hash tablice\hashtable.h(5): error C2143: syntax error : missing ';' before 'using'
+     1>c:\users\jolextek\documents\visual studio 2010\projects\hash tablice\hash tablice\hashtable.cpp(13): error C2679: binary '=' : no operator found which takes a right-hand operand of type 'HashObject *' (or there is no acceptable conversion)
+                 c:\users\jolextek\documents\visual studio 2010\projects\hash tablice\hash tablice\hashobject.h(19): could be 'HashObject &HashObject::operator =(const HashObject &)'
+                 while trying to match the argument list '(HashObject, HashObject *)'
+     1>Done Building Project "c:\Users\JolexTek\documents\visual studio 2010\Projects\Hash Tablice\Hash Tablice\Hash Tablice.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.35

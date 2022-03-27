@@ -1,0 +1,24 @@
+﻿Build started 18-May-14 16:12:39.
+     1>Project "D:\My Files\Elektronski Fakultet\IV Semestar\Strukture Podataka\Lab Vezbe\Lab 6\Lab6DinamickiNOVO\Lab6DinamickiNOVO\Lab6DinamickiNOVO.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\Lab6DinamickiNOVO.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>d:\my files\elektronski fakultet\iv semestar\strukture podataka\lab vezbe\lab 6\lab6dinamickinovo\lab6dinamickinovo\poteg.h(22): warning C4150: deletion of pointer to incomplete type 'cvor'; no destructor called
+                 d:\my files\elektronski fakultet\iv semestar\strukture podataka\lab vezbe\lab 6\lab6dinamickinovo\lab6dinamickinovo\poteg.h(5) : see declaration of 'cvor'
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\My Files\Elektronski Fakultet\IV Semestar\Strukture Podataka\Lab Vezbe\Lab 6\Lab6DinamickiNOVO\Debug\Lab6DinamickiNOVO.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Lab6DinamickiNOVO.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\My Files\Elektronski Fakultet\IV Semestar\Strukture Podataka\Lab Vezbe\Lab 6\Lab6DinamickiNOVO\Debug\Lab6DinamickiNOVO.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\My Files\Elektronski Fakultet\IV Semestar\Strukture Podataka\Lab Vezbe\Lab 6\Lab6DinamickiNOVO\Debug\Lab6DinamickiNOVO.lib" /MACHINE:X86 Debug\graf.obj
+         Debug\main.obj
+         LINK : D:\My Files\Elektronski Fakultet\IV Semestar\Strukture Podataka\Lab Vezbe\Lab 6\Lab6DinamickiNOVO\Debug\Lab6DinamickiNOVO.exe not found or not built by the last incremental link; performing full link
+         Lab6DinamickiNOVO.vcxproj -> D:\My Files\Elektronski Fakultet\IV Semestar\Strukture Podataka\Lab Vezbe\Lab 6\Lab6DinamickiNOVO\Debug\Lab6DinamickiNOVO.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\My Files\Elektronski Fakultet\IV Semestar\Strukture Podataka\Lab Vezbe\Lab 6\Lab6DinamickiNOVO\Debug\Lab6DinamickiNOVO.exe;#1" /manifest Debug\Lab6DinamickiNOVO.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\Lab6DinamickiNOVO.unsuccessfulbuild".
+         Touching "Debug\Lab6DinamickiNOVO.lastbuildstate".
+     1>Done Building Project "D:\My Files\Elektronski Fakultet\IV Semestar\Strukture Podataka\Lab Vezbe\Lab 6\Lab6DinamickiNOVO\Lab6DinamickiNOVO\Lab6DinamickiNOVO.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.03

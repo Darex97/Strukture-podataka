@@ -1,0 +1,13 @@
+- Bez obzira da li ih implementiras preko lancanih listi, ili nizova, u svakom slucaju 
+ti one predstavljaju nizove HashObjekata. S tim sto ukoliko koristis lancane liste
+tada su ti cvorovi zapravo HashObjekti, nemas razloga da pravis SLLNode klasu.
+A ukoliko koristis unutrasnje ulancavanje onda za to koristis polje sacinjeno takodje od
+HashObjekata. Jako bitno, iako zvuci trivijalno i nadasve logicno, mislim da treba
+da te podsetim.
+Cepas. ;)
+
+-Mislim da su prva dva zadatka posebno lepo obasnjena
+
+-Zbog gresaka u tekstu nisam siguran, ali pretpostavljam da su 5-3 i 6-2 isti zadaci.
+
+-Zadaci od 7 do 10 su skoro identicni. Zato je samo jedan uradjen.

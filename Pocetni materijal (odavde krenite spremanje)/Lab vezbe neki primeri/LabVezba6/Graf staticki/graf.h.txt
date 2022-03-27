@@ -1,0 +1,11 @@
+class graf  
+{
+public:
+	int brojc;
+	int **mat;
+	graf(int a);
+	void insert(int a,int b);
+	virtual ~graf();
+	int* nadji();
+	void print();
+};

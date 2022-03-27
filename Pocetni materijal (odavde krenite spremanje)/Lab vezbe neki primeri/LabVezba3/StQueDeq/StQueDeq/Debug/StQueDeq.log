@@ -1,0 +1,31 @@
+﻿Build started 5/16/2011 6:23:08 PM.
+     1>Project "c:\Users\JolexTek\documents\visual studio 2010\Projects\StQueDeq\StQueDeq\StQueDeq.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\StQueDeq.unsuccessfulbuild".
+       ClCompile:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Glavna.cpp
+         Glavna.cpp
+     1>c:\users\jolextek\documents\visual studio 2010\projects\stquedeq\stquedeq\queueasarray.h(51): error C2953: 'QueueAsArray' : class template has already been defined
+                 c:\users\jolextek\documents\visual studio 2010\projects\stquedeq\stquedeq\queueasarray.h(8) : see declaration of 'QueueAsArray'
+     1>c:\users\jolextek\documents\visual studio 2010\projects\stquedeq\stquedeq\dequeasarray.h(10): error C2955: 'QueueAsArray' : use of class template requires template argument list
+                 c:\users\jolextek\documents\visual studio 2010\projects\stquedeq\stquedeq\queueasarray.h(8) : see declaration of 'QueueAsArray'
+                 c:\users\jolextek\documents\visual studio 2010\projects\stquedeq\stquedeq\dequeasarray.h(44) : see reference to class template instantiation 'DequeAsArray<T>' being compiled
+     1>c:\users\jolextek\documents\visual studio 2010\projects\stquedeq\stquedeq\glavna.cpp(11): error C2514: 'QueueAsArray' : class has no constructors
+                 c:\users\jolextek\documents\visual studio 2010\projects\stquedeq\stquedeq\queueasarray.h(8) : see declaration of 'QueueAsArray'
+     1>c:\users\jolextek\documents\visual studio 2010\projects\stquedeq\stquedeq\glavna.cpp(12): error C2662: 'QueueAsArray<T>::enqueue' : cannot convert 'this' pointer from 'QueueAsArray' to 'QueueAsArray<T> &'
+                 Reason: cannot convert from 'QueueAsArray' to 'QueueAsArray<T>'
+                 Conversion requires a second user-defined-conversion operator or constructor
+     1>c:\users\jolextek\documents\visual studio 2010\projects\stquedeq\stquedeq\glavna.cpp(13): error C2662: 'QueueAsArray<T>::enqueue' : cannot convert 'this' pointer from 'QueueAsArray' to 'QueueAsArray<T> &'
+                 Reason: cannot convert from 'QueueAsArray' to 'QueueAsArray<T>'
+                 Conversion requires a second user-defined-conversion operator or constructor
+     1>c:\users\jolextek\documents\visual studio 2010\projects\stquedeq\stquedeq\glavna.cpp(14): error C2662: 'QueueAsArray<T>::enqueue' : cannot convert 'this' pointer from 'QueueAsArray' to 'QueueAsArray<T> &'
+                 Reason: cannot convert from 'QueueAsArray' to 'QueueAsArray<T>'
+                 Conversion requires a second user-defined-conversion operator or constructor
+     1>c:\users\jolextek\documents\visual studio 2010\projects\stquedeq\stquedeq\glavna.cpp(15): error C2662: 'QueueAsArray<T>::getHead' : cannot convert 'this' pointer from 'QueueAsArray' to 'QueueAsArray<T> &'
+                 Reason: cannot convert from 'QueueAsArray' to 'QueueAsArray<T>'
+                 Conversion requires a second user-defined-conversion operator or constructor
+     1>Done Building Project "c:\Users\JolexTek\documents\visual studio 2010\Projects\StQueDeq\StQueDeq\StQueDeq.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.02

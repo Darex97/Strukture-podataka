@@ -1,0 +1,86 @@
+#pragma once
+#include"HashObjectLL.h"
+
+class HashTable
+{
+private:
+	HashObjectLL* arr;
+	int counter;
+	int length;
+public:
+	HashTable(int l)
+	{
+		length = l;
+		counter = 0;
+		arr = new HashObjectLL[length];
+	}
+	~HashTable()
+	{
+		if (arr)
+			delete[] arr;
+	}
+	void insert(char* obj)
+	{
+		if (counter == length - 1)
+			throw "Stack overflow!";
+		arr[h(obj)].addToHead(obj);
+		counter++;
+	}
+	void withdraw(char* obj)
+	{
+		if (counter == 0)
+			throw "Stack underflow!";
+		if (arr[h(obj)].deleteEl(obj))
+			counter--;
+	}
+	void print()
+	{
+		int i = 0, j = 0;
+		while (i < counter && j<length)
+		{
+			if (!arr[j].isEmpty())
+			{
+				cout << j << ": ";
+				arr[j].print();
+				i++;
+			}
+			j++;
+		}
+	}
+	HashObject* find(char* obj)
+	{
+		HashObject* tmp;
+		tmp=arr[h(obj)].find(obj);
+		return tmp;
+	}
+
+private:
+	unsigned int h(char* obj)
+	{
+		return (f(obj) % length);
+	}
+
+	unsigned int f(int i)
+	{
+		return abs(i);
+	}
+	unsigned int f(double d)
+	{
+		if (d == 0)
+			return 0;
+		else
+		{
+			int exponent;
+			double mantissa = frexp(d, &exponent);
+			return (unsigned int)((2 * fabs(mantissa) - 1)*~0U);
+		}
+	}
+	unsigned int f(char* s)
+	{
+		unsigned int res = 0;
+		unsigned int a = 7;
+		for (int i = 0; i < s[i] != '\0'; i++)
+			res = res << a^s[i];
+		return res;
+	}
+};

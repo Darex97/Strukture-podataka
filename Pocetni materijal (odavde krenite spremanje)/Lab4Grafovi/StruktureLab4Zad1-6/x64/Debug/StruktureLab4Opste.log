@@ -1,0 +1,59 @@
+﻿  Main.cpp
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(10): error C2143: syntax error: missing ';' before '*'
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(10): error C2238: unexpected token(s) preceding ';'
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(22): error C2061: syntax error: identifier 'Edge'
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(22): error C2535: 'LinkedNode::LinkedNode(int)': member function already defined or declared
+  c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(15): note: see declaration of 'LinkedNode::LinkedNode'
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(14): error C2065: 'adj': undeclared identifier
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(18): error C2065: 'adj': undeclared identifier
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(25): error C2065: 'adj': undeclared identifier
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(25): error C2065: 'adjN': undeclared identifier
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(26): error C2065: 'nextN': undeclared identifier
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(27): error C2065: 'statusN': undeclared identifier
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.h(17): error C2143: syntax error: missing ';' before '*'
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.h(17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.h(17): error C2238: unexpected token(s) preceding ';'
+  GraphAsLists.cpp
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(10): error C2143: syntax error: missing ';' before '*'
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(10): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(10): error C2238: unexpected token(s) preceding ';'
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(22): error C2061: syntax error: identifier 'Edge'
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(22): error C2535: 'LinkedNode::LinkedNode(int)': member function already defined or declared
+  c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(15): note: see declaration of 'LinkedNode::LinkedNode'
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(14): error C2065: 'adj': undeclared identifier
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(18): error C2065: 'adj': undeclared identifier
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(25): error C2065: 'adj': undeclared identifier
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(25): error C2065: 'adjN': undeclared identifier
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(26): error C2065: 'nextN': undeclared identifier
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(27): error C2065: 'statusN': undeclared identifier
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.h(17): error C2143: syntax error: missing ';' before '*'
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.h(17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.h(17): error C2238: unexpected token(s) preceding ';'
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.cpp(7): error C2661: 'LinkedNode::LinkedNode': no overloaded function takes 4 arguments
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.cpp(29): error C2561: 'GraphAsLists::insertEdge': function must return a value
+  c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.cpp(24): note: see declaration of 'GraphAsLists::insertEdge'
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.cpp(30): error C2039: 'adj': is not a member of 'LinkedNode'
+  c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(7): note: see declaration of 'LinkedNode'
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.cpp(30): error C2664: 'Edge::Edge(Edge &&)': cannot convert argument 1 from 'LinkedNode *' to 'const Edge &'
+  c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.cpp(30): note: Reason: cannot convert from 'LinkedNode *' to 'const Edge'
+  c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.cpp(30): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.cpp(32): error C2039: 'adj': is not a member of 'LinkedNode'
+  c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(7): note: see declaration of 'LinkedNode'
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.cpp(35): error C2039: 'findEdge': is not a member of 'GraphAsLists'
+  c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.h(5): note: see declaration of 'GraphAsLists'
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.cpp(37): error C3861: 'findNode': identifier not found
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.cpp(38): error C3861: 'findNode': identifier not found
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.cpp(43): error C2039: 'adj': is not a member of 'LinkedNode'
+  c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(7): note: see declaration of 'LinkedNode'
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.cpp(55): error C2039: 'adj': is not a member of 'LinkedNode'
+  c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(7): note: see declaration of 'LinkedNode'
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.cpp(58): error C2039: 'adj': is not a member of 'LinkedNode'
+  c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(7): note: see declaration of 'LinkedNode'
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.cpp(62): error C2039: 'adj': is not a member of 'LinkedNode'
+  c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(7): note: see declaration of 'LinkedNode'
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.cpp(75): error C2039: 'adj': is not a member of 'LinkedNode'
+  c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(7): note: see declaration of 'LinkedNode'
+c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\graphaslists.cpp(98): error C2039: 'adj': is not a member of 'LinkedNode'
+  c:\users\darko\documents\visual studio 2015\projects\strukturelab4opste\strukturelab4opste\linkednode.h(7): note: see declaration of 'LinkedNode'
+  Generating Code...

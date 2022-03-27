@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3 vezba 6 zadatak", "3 vezba 6 zadatak\3 vezba 6 zadatak.vcproj", "{C5F5F2B7-7EA7-4A2A-A740-B1085E47AA71}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5F5F2B7-7EA7-4A2A-A740-B1085E47AA71}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C5F5F2B7-7EA7-4A2A-A740-B1085E47AA71}.Debug|Win32.Build.0 = Debug|Win32
+		{C5F5F2B7-7EA7-4A2A-A740-B1085E47AA71}.Release|Win32.ActiveCfg = Release|Win32
+		{C5F5F2B7-7EA7-4A2A-A740-B1085E47AA71}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

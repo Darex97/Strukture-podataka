@@ -1,0 +1,132 @@
+class Lista
+{
+	int [] Link;
+	int [] Info;
+	int max;
+}
+
+public class Class1
+{
+	protected Lista SL;
+	
+	public void Postavi(int n)
+	{
+		SL=new Lista();
+		SL.max=n;
+		SL.Link=new int[n];
+		SL.Info=new int[n];
+		SL.Info[0]=1;
+	}
+	
+	public void Unesi(int k)
+	{
+		if(SL.Info[0]==SL.max)
+			System.out.println("Nemozete uneti novi element posto je lista vec puna");
+		else
+		{
+			SL.Info[SL.Info[0]]=k;
+			SL.Link[SL.Info[0]]=0;
+			if(SL.Info[0]==1)
+			{
+				SL.Link[0]=1;
+			}
+			else
+			{
+				int tekuci=SL.Link[0];
+				while(SL.Link[tekuci]!=0)
+				{
+					tekuci=SL.Link[tekuci];
+				}
+				SL.Link[tekuci]=SL.Info[0];
+			}
+			SL.Info[0]++;
+		}
+	}
+	
+	public void Stampaj()
+	{
+		if(SL.Info[0]==1)
+			System.out.println("Lista je prazna");
+		else
+		{
+			int tekuci=SL.Link[0];
+			while(tekuci!=0)
+			{
+				System.out.println(SL.Info[tekuci]);
+				tekuci=SL.Link[tekuci];
+			}
+		}
+	}
+	
+	public int LinkPretMin(int poc)
+	{
+		int prethodnimin=poc;
+		int prethodni=poc,min=SL.Info[SL.Link[poc]],tekuci=SL.Link[poc];
+		while(tekuci!=0)
+		{
+			if(SL.Info[tekuci]<min)
+			{
+				min=SL.Info[tekuci];
+				prethodnimin=prethodni;
+			}
+			prethodni=tekuci;
+			tekuci=SL.Link[tekuci];
+		}
+		return prethodnimin;
+	}
+	
+	public void SSort()
+	{
+		int min,postmin,pretmin,prethodni;
+		pretmin=LinkPretMin(SL.Link[0]);
+		min=SL.Link[pretmin];
+		postmin=SL.Link[min];
+		
+		SL.Link[min]=SL.Link[0];
+		SL.Link[0]=min;
+		
+		SL.Link[pretmin]=postmin;
+		
+		prethodni=min;
+		
+		while(SL.Link[prethodni]!=0)
+		{
+			pretmin=LinkPretMin(prethodni);
+			min=SL.Link[pretmin];
+			postmin=SL.Link[min];
+			
+			if(pretmin!=prethodni)
+			{	
+			  SL.Link[min]=SL.Link[prethodni];
+			  SL.Link[prethodni]=min;
+			  SL.Link[pretmin]=postmin;
+			}
+			
+			prethodni=min;
+			
+		}
+	}
+	
+	
+	public static void main (String[] args)
+	{
+		Class1 L;
+		L=new Class1();
+		L.Postavi(10);
+		L.Unesi(3);
+		L.Unesi(-2);
+		L.Unesi(5);
+		L.Unesi(1);
+		L.Unesi(-19);
+		L.Unesi(15);
+		L.Unesi(-13);
+		L.Unesi(11);
+		System.out.println("Ovako izgleda lista pre sortiranja");
+		L.Stampaj();
+		L.SSort();
+		System.out.println("Ovako izgleda lista nakon sortiranja");
+		L.Stampaj();
+	}
+}
+
+

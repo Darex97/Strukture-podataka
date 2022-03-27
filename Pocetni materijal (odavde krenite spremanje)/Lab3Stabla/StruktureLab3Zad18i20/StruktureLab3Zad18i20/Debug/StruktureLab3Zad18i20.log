@@ -1,0 +1,4 @@
+﻿  BinarniStatickiHip.cpp
+c:\users\darko\desktop\fakultet\darko\iv semestar\strukture podataka\labpraktikum\lab3stabla\strukturelab3zad18i20\strukturelab3zad18i20\binarnistatickihip.cpp(104): warning C4715: 'BinarniStatickiHip::trazim': not all control paths return a value
+  StruktureLab3Zad18i20.vcxproj -> C:\Users\Darko\Desktop\Fakultet\Darko\IV semestar\Strukture podataka\LabPraktikum\Lab3Stabla\StruktureLab3Zad18i20\Debug\StruktureLab3Zad18i20.exe
+  StruktureLab3Zad18i20.vcxproj -> C:\Users\Darko\Desktop\Fakultet\Darko\IV semestar\Strukture podataka\LabPraktikum\Lab3Stabla\StruktureLab3Zad18i20\Debug\StruktureLab3Zad18i20.pdb (Full PDB)

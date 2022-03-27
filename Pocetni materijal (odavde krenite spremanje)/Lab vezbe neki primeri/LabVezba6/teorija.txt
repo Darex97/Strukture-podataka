@@ -1,0 +1,83 @@
+Graf (engl.graph) je uredeni par G = (V,E) , gde je V 
+konacan neprazan skup elemenata koji se nazivaju 
+cvorovi ili temena (engl.node), a E konacan skup 
+uredenih parova cvorova, tj. E podskup V krst V. Elementi 
+skupa E nazivaju se grane ili potezi(engl. edge) 
+grafa.
+
+Prethodna definicija odnosi se na takozvani 
+orijentisani graf (digraf)
+Ukoliko se skup grana E definiše kao skup parova cvorova, 
+E = { {u,v}| u,v EV i u != v }, graf je 
+neorijentisan.
+
+
+Granu e orijentisanog grafa izvire iz cvora v ako
+se cvor v javlja kao prvi cvor u uredenom paru
+koji definiše dati poteg e = (v,u) , a ukoliko se 
+nalazi kao drugi clan uredenog para e = (u,v), kaze
+se da uvire u dati cvor.
+
+ Izlazni stepen nekog cvora je broj potega koji
+izvire iz njega, a 
+ulazni stepen, broj potega koji
+uviru u njega. 
+Stepen cvora je zbir ulaznog i 
+izlaznog stepena.
+
+
+• Ciklus
+je put kod koga se poklapaju prvi i 
+poslednji cvor, tj. važi: v1 = vk.
+• Ciklus
+je 
+prost
+ako zadovoljava uslov
+jednostavnog puta.
+• Ciklus dužine 1 naziva se 
+petlja.
+• Usmereni graf koji ne sadrži cikluse naziva se 
+usmereni aciklicni graf. (Primer takvog grafa je 
+stablo)
+• Težinski grafovi
+- grafovi kod kojjih su dodeljeni
+težinski koeficijenati granama.
+
+
+
+
+obilazak:
+po širini
+- najpre se obilaze svi susedi jednog cvora pre nego
+što se prede na sledeci i po dubini
+- obilazi se najpre prvi sused datog cvora, pa zatim
+prvi sused prvog suseda, i tako redom
+
+
+
+
+Topološko uredenje može da funkcioniše samo u slucaju orijentisanog grafa 
+bez ciklusa. Ukoliko postoje cikluci neki cvorovi nikada nece biti poseceni, 
+obzirom da nihov ulazni stepen prethodnom metodom nikada ne postaje 0.
+              broj Cvorova != topologicalOrderTraversal()
+
+
+
+Jako povezani graf je orijentisani graf 
+kod koga postoji put izmedu bilo koja 
+dva cvora.
+Slabo povezani graf
+nema to svojstvo, ali zahteva da odgovarajuci 
+neorijentisani graf (graf koji bi se dobio zamenom svih orijentisanih grana 
+neorijentisanim) mora biti jako povezan.
+Provera da li je orijentisani graf jako povezan vrši se proverom da li obilazak 
+iniciran iz svakog cvora prolazi kroz sve cvorove grafa. Ukoliko je uslov 
+ispunjen za sve cvorove grafa, graf je 
+jako povezan
+. Ako uslov nije ispunjen 
+za orijentisani graf, ali jeste za odgovarajuci neorijentisani, graf je 
+slabo 
+povezan
+. Ukoliko uslov nije ispunjen ni za odgovarajuci neorijentisani graf, 
+graf je 
+nepovezan

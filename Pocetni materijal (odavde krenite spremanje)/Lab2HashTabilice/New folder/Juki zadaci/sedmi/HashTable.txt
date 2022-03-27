@@ -1,0 +1,138 @@
+#pragma once
+#include"HashObject.h"
+
+class HashTable
+{
+private:
+	HashObject* arr;
+	int length;
+	int counter;
+public:
+	HashTable()
+	{
+		arr = 0;
+		counter = 0;
+		length = 0;
+	}
+	HashTable(int l)
+	{
+		length = l;
+		counter = 0;
+		arr = new HashObject[length];
+	}
+	~HashTable()
+	{
+		if (arr)
+			delete[] arr;
+	}
+	void insert(char* p)
+	{
+		if (counter == length - 1)
+			throw "Full!";
+		unsigned int i = 0;
+		if (arr[hh(f(p), i)].status == 0)
+		{
+			arr[hh(f(p), i)].set(p, -1);
+			counter++;
+		}
+		else if (arr[hh(f(p), i)].status == 1)
+		{
+			arr[hh(f(p), i)].set(p);
+			counter++;
+		}
+		else
+		{
+			unsigned int prev = hh(f(p), i);
+			while (arr[prev].next != -1)
+			{
+				prev = arr[hh(f(p), i)].next;
+			}
+			for (i = 1; arr[hh(f(p), i)].isUsed(); i++);
+			arr[prev].next = hh(f(p), i);
+			arr[hh(f(p), i)].set(p, -1);
+			counter++;
+		}
+	}
+	int findInd(char* p)
+	{
+		unsigned int ind = h(f(p));
+		while (!arr[ind].isEqual(p) && arr[ind].next != -1)
+		{
+			ind = arr[ind].next;
+		}
+		if (arr[ind].isEqual(p))
+			return ind;
+		else
+			return -1;
+	}
+	void print()
+	{
+		int j = 0;
+		for (int i = 0; i < length && j<counter; i++)
+		{
+			if (arr[i].status != 0)
+			{
+				cout << i << ": ";
+				arr[i].print();
+				cout << endl;
+				j++;
+			}
+		}
+	}
+	void withdraw(char* p)
+	{
+		unsigned int i = 0;
+		if (arr[hh(f(p), i)].isEqual(p))
+		{
+			arr[hh(f(p), i)].free();
+			counter--;
+		}
+		else
+		{
+			i = hh(f(p), i);
+			while (arr[i].next != -1 && !arr[i].isEqual(p))
+			{
+				i = arr[i].next;
+			}
+			if (arr[i].isEqual(p))
+			{
+				arr[hh(f(p), i)].free();
+				counter--;
+			}
+		}
+	}
+
+private:
+	unsigned int h(unsigned int k)
+	{
+		return k%length;
+	}
+	unsigned int hh(unsigned int k, unsigned int i)
+	{
+		return ((k + i)%length);
+	}
+	/*unsigned int c(int p)
+	{
+		return p%length;
+	}*/
+	unsigned int f(int i)
+	{
+		return abs(i);
+	}
+	unsigned int f(double d)
+	{
+		if (d == 0)
+			return 0;
+		int exponent;
+		double mantissa = frexp(d, &exponent);
+		return (unsigned int)(2 * fabs(mantissa) - 1)*~0U;
+	}
+	unsigned int f(char* ss)
+	{
+		unsigned int a = 7;
+		unsigned int res = 0;
+		for (int i = 0; ss[i] != '\0'; i++)
+			res = res << a^ss[i];
+		return res;
+	}
+};

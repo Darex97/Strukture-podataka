@@ -1,0 +1,31 @@
+﻿Build started 22-May-13 0:09:42.
+     1>Project "C:\Users\LAZAR\Documents\Visual Studio 2010\Projects\Strukture podataka\Lab6\Lab6\Lab6.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\Lab6.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt GraphAsLists.cpp main.cpp
+         main.cpp
+         GraphAsLists.cpp
+         Generating Code...
+       ManifestResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\LAZAR\Documents\Visual Studio 2010\Projects\Strukture podataka\Lab6\Debug\Lab6.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Lab6.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\LAZAR\Documents\Visual Studio 2010\Projects\Strukture podataka\Lab6\Debug\Lab6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\LAZAR\Documents\Visual Studio 2010\Projects\Strukture podataka\Lab6\Debug\Lab6.lib" /MACHINE:X86 Debug\Lab6.exe.embed.manifest.res
+         Debug\Edge.obj
+         Debug\GraphAsLists.obj
+         Debug\LinkedNode.obj
+         Debug\main.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\Lab6.exe.embed.manifest" /manifest Debug\Lab6.exe.intermediate.manifest
+         All outputs are up-to-date.
+       LinkEmbedManifest:
+         All outputs are up-to-date.
+         Lab6.vcxproj -> C:\Users\LAZAR\Documents\Visual Studio 2010\Projects\Strukture podataka\Lab6\Debug\Lab6.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\Lab6.unsuccessfulbuild".
+         Touching "Debug\Lab6.lastbuildstate".
+     1>Done Building Project "C:\Users\LAZAR\Documents\Visual Studio 2010\Projects\Strukture podataka\Lab6\Lab6\Lab6.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.03

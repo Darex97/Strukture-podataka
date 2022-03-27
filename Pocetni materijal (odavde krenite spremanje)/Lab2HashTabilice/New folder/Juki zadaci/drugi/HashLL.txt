@@ -1,0 +1,52 @@
+#pragma once
+#include"HashNode.h"
+
+class HashLL
+{
+private:
+	HashNode* head;
+	HashNode* tail;
+public:
+	HashLL()
+	{
+		head = tail = NULL;
+	}
+	~HashLL()
+	{
+		while (!isEmpty())
+			deleteFromHead();
+	}
+	bool isEmpty()
+	{
+		return head == NULL;
+	}
+	void deleteFromHead()
+	{
+		HashNode* tmp = head;
+		if (head == tail)
+			head = tail = NULL;
+		else
+			head = head->next;
+		delete tmp;
+	}
+	void addToHead(int k, char* i, char* p)
+	{
+		head = new HashNode(k, i, p, head);
+		if (tail == NULL)
+			tail = head;
+	}
+	HashNode* findNode(int k, char* i, char* p)
+	{
+		HashNode* tmp = head;
+		while (!tmp->isEqualAll(k, i, p)&& tmp!=tail)
+			tmp = tmp->next;
+		if (tmp->isEqualAll(k, i, p))
+			return tmp;
+		return NULL;
+	}
+	void printList()
+	{
+		for (HashNode* tmp = head; tmp != NULL; tmp = tmp->next)
+			tmp->printNode();
+	}
+};

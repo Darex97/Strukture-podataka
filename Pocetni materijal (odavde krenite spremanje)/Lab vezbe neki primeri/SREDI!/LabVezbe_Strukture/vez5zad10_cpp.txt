@@ -1,0 +1,145 @@
+#include<iostream.h>
+#include<stdlib.h>
+#include<math.h>
+class Stablo
+{
+public:
+	int inf;
+	Stablo *levi,*desni;
+
+	Stablo(int k)
+	{
+		inf=k;
+		levi=NULL;
+		desni=NULL;
+	}
+	~Stablo()
+	{
+		delete levi;
+		delete desni;
+	}
+};
+void Dodaj(int n,Stablo **koren)
+{
+	if(*koren==NULL)
+		*koren=new Stablo(n);
+	else
+		if (n<(*koren)->inf)
+			Dodaj(n,&((*koren)->levi));
+		else Dodaj(n,&((*koren)->desni));
+}
+void Stampaj(Stablo **koren)
+{
+	if(*koren!=NULL)
+	{
+		Stampaj(&(*koren)->levi);
+		cout<<(*koren)->inf<<" ";
+		Stampaj(&(*koren)->desni);
+	}
+}
+void Listovi(Stablo **koren)
+{
+	if(*koren!=NULL)
+	{
+		Listovi(&(*koren)->levi);
+		if(((*koren)->levi==NULL)&&((*koren)->desni==NULL))
+			cout<<(*koren)->inf<<" ";
+		Listovi(&(*koren)->desni);
+	}
+}
+int Suma(Stablo **koren)
+{
+	if(*koren==NULL)
+		return(0);
+	else return((*koren)->inf+Suma(&(*koren)->levi)+Suma(&(*koren)->desni));
+}
+int BrElem(Stablo **koren)
+{
+	if(*koren==NULL) return(0);
+	else return(1+BrElem(&(*koren)->levi)+BrElem(&(*koren)->desni));
+}
+void Obrisi(Stablo **koren)
+{
+	if(*koren!=NULL)
+	{
+		Obrisi(&(*koren)->levi);
+		Obrisi(&(*koren)->desni);
+		delete (*koren);
+		*koren=NULL;
+	}
+}
+int Postoji(int k,Stablo **koren)
+{
+	if(*koren==NULL) return(0);
+	else if((*koren)->inf==k) return(1);
+	else return(Postoji(k,&(*koren)->levi)||Postoji(k,&(*koren)->desni));
+}
+int BrPojavljivanja(int k,Stablo **koren)
+{
+	if(*koren==NULL) return(0);
+	else return(((*koren)->inf==k)+BrPojavljivanja(k,&(*koren)->levi)+BrPojavljivanja(k,&(*koren)->desni));
+}
+/*void IspisPoNivoima(Stablo **koren)
+{
+	if(*koren!=NULL)
+	{
+		cout<<(*koren)->inf<<" ";
+		IspisPoNivoima(&(*koren)->levi);
+	    IspisPoNivoima(&(*koren)->desni);
+	}
+}*/
+int Max(int x,int y)
+{
+	if(x>y) return x;
+	else return y;
+}
+int Dubina(Stablo **koren)
+{
+	if(*koren==NULL) return 0;
+	else return(1+Max(Dubina(&(*koren)->levi),Dubina(&(*koren)->desni)));
+}
+void main()
+{
+	Stablo *koren;
+	int k,n,m;
+	koren=NULL;
+	cout<<"****************** OVO JE PROGRAM ZA RAD SA BINARNIM STABLOM. *****************"<<endl;
+	do
+	{
+		cout<<endl;
+		cout<<"Za unos elementa u stablo pritisnite taster 1."<<endl;
+		cout<<"Za ispis elemenata pritisnite taster 2. "<<endl;
+		cout<<"Za ispis listova stablo pritisnite taster 3."<<endl;
+		cout<<"Za izracunavanje sume elemenata pritisnite taster 4."<<endl;
+		cout<<"Za izracunavanje broja elemenata stabla pritisnite taster 5."<<endl;
+		cout<<"Za ispitivanje da li odredjeni element postoji u stablu pritisnite taster 6,"<<endl;
+		cout<<" a za odredjivanje broja pojavljivanja elementa u stablu taster 7"<<endl;
+		cout<<"Za odredjivanje dubine stabla pritisnite taster 8, a za kraj programa 9"<<endl;
+		cin>>k;
+		switch(k)
+		{
+		case 1:cout<<"Unesite ceo broj: ";cin>>n;Dodaj(n,&koren);break;
+		case 2:if(koren==NULL) cout<<"Stablo je prazno!"<<endl;
+			   else   {  cout<<"Stablo trenutno izgleda ovako:"<<endl;Stampaj(&koren);cout<<endl; } break;
+		case 3:if(koren==NULL) cout<<"Stablo je prazno!"<<endl;
+			   else   {  cout<<"Listovi stabla su:"<<endl;Listovi(&koren);cout<<endl; } break;
+		case 4:if(koren==NULL) cout<<"Stablo je prazno!"<<endl;
+			   else   {  cout<<"Suma elemenata stabla je:"<<Suma(&koren)<<endl; } break;
+		case 5:if(koren==NULL) cout<<"Stablo je prazno!"<<endl;
+			   else   {  cout<<"Broj elemenata stabla :"<<BrElem(&koren)<<endl; } break;
+		case 6:cout<<"Unesite ceo broj: ";cin>>m;
+			   if(Postoji(m,&koren)) cout<<"Uneti broj postoji u stablu."<<endl;
+			   else cout<<"Uneti broj ne postoji u stablu."<<endl; break;
+		case 7:cout<<"Unesite ceo broj: ";cin>>m;
+			   if(BrPojavljivanja(m,&koren)) cout<<"Uneti broj pojavljuje u stablu "<<BrPojavljivanja(m,&koren)<<" put(a)"<<endl;
+			   else cout<<"Uneti broj ne postoji u stablu."<<endl; break;
+		case 8:if(koren==NULL) cout<<"Stablo je prazno!"<<endl;
+			   else   {  cout<<"Dubina stabla je:"<<Dubina(&koren)<<endl; } break;
+		case 9:cout<<"Kraj programa !";Obrisi(&koren);break;
+		default:cout<<"Nekorektan unos !"<<endl;
+		}
+		cout<<endl;
+	}
+	while(k!=9);
+}
+

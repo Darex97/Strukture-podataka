@@ -1,0 +1,6 @@
+c:\users\nikolic\documents\visual studio 2013\Projects\prvi\prvi\bin\x86\Debug\prvi.exe.config
+c:\users\nikolic\documents\visual studio 2013\Projects\prvi\prvi\bin\x86\Debug\prvi.exe
+c:\users\nikolic\documents\visual studio 2013\Projects\prvi\prvi\bin\x86\Debug\prvi.pdb
+c:\users\nikolic\documents\visual studio 2013\Projects\prvi\prvi\obj\x86\Debug\prvi.csprojResolveAssemblyReference.cache
+c:\users\nikolic\documents\visual studio 2013\Projects\prvi\prvi\obj\x86\Debug\prvi.exe
+c:\users\nikolic\documents\visual studio 2013\Projects\prvi\prvi\obj\x86\Debug\prvi.pdb

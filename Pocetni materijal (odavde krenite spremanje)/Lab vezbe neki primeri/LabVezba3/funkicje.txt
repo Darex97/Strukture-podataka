@@ -1,0 +1,193 @@
+
+void push(int n)
+{
+if(top==(size-1))
+
+      throw new SBPEception("stack overflow");
+niz[++top]=n;
+}
+
+
+int pop()
+{ 
+
+if (top==-1)
+   throw new SBPEception("queue underflow");
+return niz[top--];
+
+
+
+
+red;
+
+
+
+
+
+
+void  enqueue (int n)
+{
+if (numOfElements==size)
+   throw new SBPEception("queue overflow");
+if(++tail==size) 
+         tail=0;
+niz[tail]=n;
+if (numOfElements==0)
+     head=tail;
+numOfElements++;
+}
+
+
+
+
+
+
+int dequeue()
+{
+   if (numOfElements==size)
+       throw new SBPEception("queue underflow");
+    int pom=niz[head];
+if (++head==size) head=0;
+numOfElements--;
+if(numOfElements==0)
+	head=tail=-1;
+return pom;
+}
+
+
+
+
+int getHead()
+{
+   if (numOfElements==0)
+ 	throw new SBPEception("queue undererflow");
+return niz[head];
+}
+
+
+
+
+
+
+dvostrani red :
+
+
+
+
+
+ void enqueueHead( int n)
+{
+
+if (numOfElements==size)
+     throw new SBPEception("dequeue overflow");
+if(numOfElements==0)
+    head=tail=0;
+else if(head--==0)  
+    head=size-1;
+niz[head]=n;
+numOfElements++;
+}
+
+
+
+
+int dequeueHead()
+{
+   return dequeue();
+}
+
+
+
+
+void enqueueTail(int n)
+{
+       enqueue(n);
+}
+
+
+
+
+
+
+int dequeueTail()
+{
+     
+if (numOfElements==0)
+ 	throw new SBPEception("dequeue undererflow");
+ int pom=niz[tail];
+if (tail--==0)
+        tail=size-1;
+numOfElements--;
+return pom;
+}
+     
+
+lancana lista;
+
+
+
+void addToHead(int n)
+{
+head=new  Node(n,head);
+}
+
+
+void addToTail(int n)
+{
+
+   
+if(!isEmpty())
+    {
+	tail->next=new Node(n);
+  	tail=tail->next;
+    }
+
+else 
+head=tail=new Node(n);
+}
+
+int   deleteFromHead()
+{
+   int pom=head->info;
+    Node* tmp=head;
+if (head==tail) head=tail=NULL;
+else head=head->next;
+delete tmp;
+return pom;
+}
+
+
+int deleteFromTail()
+{
+  int pom=tail->info;
+  Node* tmp=tail;
+if(head==tail) head=tail=NULL;
+else 
+ {
+    Node* tmp;
+	for(tmp=head;tmp->next!=tail;tmp=tmp->next);  
+        tail=tmp;
+	tail->next=NULL;
+}
+delete tmp;
+return pom;
+}
+   
+   
+int getTail()
+{
+if (numOfElements==0)
+ 	throw new SBPEception("dequeue undererflow");
+return niz[tail];
+}
+
+
+Magacin je linearna struktura podataka kod koje se moze pristupiti samo poslednje
+dodatom podatku.ova struktura podataka radi po principu poslednji upisan
+prvi procitan LIFO;
+
+
+Red je linearna struktura podataka koja omogucuje pristup samo najranije dodatom podatku
+,odnosno radi po principu prvi upisan prvi procitan FIFO;
+Dvostrani red je linearna struktura podataka koja omogucuje dodavanje i brisanje podataka sa oba kraja;
+

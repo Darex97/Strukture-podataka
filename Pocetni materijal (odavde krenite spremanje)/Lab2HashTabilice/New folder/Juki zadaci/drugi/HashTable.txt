@@ -1,0 +1,67 @@
+#pragma once
+#include"HashLL.h"
+
+class HashTable
+{
+private:
+	int length;
+	HashLL* arr;
+public:
+	HashTable(int l)
+	{
+		length = l;
+		arr = new HashLL[length];
+	}
+	~HashTable()
+	{
+		if (arr)
+			delete[] arr;
+	}
+	void insert(int k, char* i, char* p)
+	{
+		arr[h(f(k))].addToHead(k, i, p);
+	}
+	HashNode* find(int k,char* i,char* p)
+	{
+		return arr[h(f(k))].findNode(k, i, p);
+	}
+	void print()
+	{
+		for (int i = 0; i < length; i++)
+			if (!arr[i].isEmpty())
+			{
+				cout << i << ":";
+				arr[i].printList();
+				cout << endl;
+			}
+	}
+
+private:
+	unsigned int h(unsigned int i)
+	{
+		return i%length;
+	}
+	unsigned int f(int i)
+	{
+		return abs(i);
+	}
+	unsigned int f(double d)
+	{
+		if (d == 0)
+			return 0;
+		else
+		{
+			int exponent;
+			double mantissa = frexp(d, &exponent);
+			return (unsigned int)(2 * fabs(mantissa) - 1)*~0U;
+		}
+	}
+	unsigned int f(char* s)
+	{
+		unsigned int res = 0;
+		unsigned int a = 7;
+		for (int i = 0; i != '\0'; i++)
+			res = res << a^s[i];
+		return res;
+	}
+};

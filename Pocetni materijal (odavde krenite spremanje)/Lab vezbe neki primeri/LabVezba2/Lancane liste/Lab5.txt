@@ -1,0 +1,19 @@
+1.  Implementirati metod za uredenje jednostruko ulancane liste po polju info u rastuci redosled, korišcenjem metode mehurova (bubble sort).
+   
+2. Implementirati klasu CyklSLList za predstavljanje ciklicne jednostruko ulancane liste i odgovarajuce metode za dodavanje i brisanje cvorova liste.
+   
+3. Implementirati klasu HeaderSLList za predstavljanje ciklicne jednostruko ulancane liste sa zaglavljem i odgovarajuce metode za dodavanje i brisanje cvorova liste.
+   
+4. Implementirati metod za uredenje dvostruko ulancane liste po polju info u rastuci redosled, korišcenjem metode mehurova (bubble sort).
+   
+5. Implementirati metod za spajanje dve sortirane jednostruko ulancane liste. Rezultujuca lista takode mora biti sortirana.
+   
+6. Implementirati metod za dodavanje cvorova jednostruko ulancane liste L2 u jednostruko ulancanu listu L1, ako u listi L1 vec ne postoji cvor sa istom vrednošcu.
+   
+7. Implemetirati metod za cepanje jednostruko ulancane liste L, na dva liste L1 i L2, pri cemu u listu L1 ulaze svi negativni elementi liste L sortirani u opadajuci redosled, a u listu L2 svi pozitivni elementi liste L, sortirani u rastuci redosled.
+   
+8. Implementirati klasu StatSLList za predstavljanje jednostruko ulancane liste pomocu polja i odgovarajuci metod za uredenje liste po polju info u rastuci redosled, korišcenjem metode mehurova (bubble sort).
+   
+9. Implementirati klasu StatSLList za predstavljanje jednostruko ulancane liste pomocu polja i odgovarajuce metode za dodavanje i brisanje cvorova liste.
+  
+10. Implementirati klasu StatDLList za predstavljanje dvostruko ulancane liste pomocu polja i odgovarajuce metode za dodavanje i brisanje cvorova liste.

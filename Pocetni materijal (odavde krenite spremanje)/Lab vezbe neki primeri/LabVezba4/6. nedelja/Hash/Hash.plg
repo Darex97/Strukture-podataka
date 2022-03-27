@@ -1,0 +1,39 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Hash - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP3C.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/Hash.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Documents and Settings\Administrator\My Documents\Elektronski Fakultet\IV Semestar\Strukture podataka\laboratorijske vezbe\6. nedelja (nisam jos uradio)\Hash\HashObject.cpp"
+"C:\Documents and Settings\Administrator\My Documents\Elektronski Fakultet\IV Semestar\Strukture podataka\laboratorijske vezbe\6. nedelja (nisam jos uradio)\Hash\SLLNode.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP3C.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP3D.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/Hash.pdb" /debug /machine:I386 /out:"Debug/Hash.exe" /pdbtype:sept 
+".\Debug\HashList.obj"
+".\Debug\HashObject.obj"
+".\Debug\SLList.obj"
+".\Debug\SLLNode.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP3D.tmp"
+<h3>Output Window</h3>
+Compiling...
+HashObject.cpp
+c:\documents and settings\administrator\my documents\elektronski fakultet\iv semestar\strukture podataka\laboratorijske vezbe\6. nedelja (nisam jos uradio)\hash\hashobject.h(20) : error C2065: 'NULL' : undeclared identifier
+SLLNode.cpp
+c:\documents and settings\administrator\my documents\elektronski fakultet\iv semestar\strukture podataka\laboratorijske vezbe\6. nedelja (nisam jos uradio)\hash\hashobject.h(20) : error C2065: 'NULL' : undeclared identifier
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+Hash.exe - 2 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,54 @@
+#pragma once
+#include<iostream>
+using namespace std;
+
+class HashNode
+{
+public:
+	int status;
+	int next;
+	char* key;
+public:
+	HashNode()
+	{
+		status = 0;
+		next = -1;
+		key = NULL;
+	}
+	~HashNode()
+	{
+		if (key)
+			delete key;
+	}
+	bool isFree()
+	{
+		return status == 0;
+	}
+	bool isEqual(char* k)
+	{
+		if (strcmp(key, k) == 0)
+			return 1;
+		return 0;
+	}
+	void setEl(char* k)
+	{
+		if (key)
+			delete key;
+		key = new char[strlen(key) + 1];
+		strcpy(key, k);
+		status = 2;
+	}
+	void setEl(char* k, int n)
+	{
+		if (key)
+			delete key;
+		key = new char[strlen(k) + 1];
+		strcpy(key, k);
+		status = 2;
+		next = n;
+	}
+	void print()
+	{
+		cout << key << "| Status:" << status << "| Next:" << next << endl;
+	}
+};
